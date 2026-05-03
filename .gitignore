@@ -83,6 +83,7 @@ log.txt
 *.db
 *.sqlite
 *.h2.db
+sql/
 
 # Node (if using node for frontend)
 node_modules/
