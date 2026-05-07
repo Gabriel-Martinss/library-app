@@ -2,14 +2,11 @@ package com.gabriel.library_api.domain.loan;
 
 import java.time.LocalDateTime;
 
-import org.springframework.data.jpa.domain.support.AuditingEntityListener;
-
 import com.gabriel.library_api.domain.user.User;
 import com.gabriel.library_api.domain.book.Book;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
-import jakarta.persistence.EntityListeners;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
