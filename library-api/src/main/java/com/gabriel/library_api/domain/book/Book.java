@@ -20,6 +20,9 @@ import java.time.LocalDateTime;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
+import com.gabriel.library_api.domain.author.Author;
+import com.gabriel.library_api.domain.category.Category;
+
 @NoArgsConstructor(access = lombok.AccessLevel.PROTECTED)
 @AllArgsConstructor
 @Getter
@@ -44,17 +47,17 @@ public class Book {
 
     @ManyToOne
     @JoinColumn(name = "author_id", nullable = false)
-    private Long author;
+    private Author author;
 
     @ManyToOne
     @JoinColumn(name = "category_id", nullable = false)
-    private Long category;
+    private Category category;
 
     @CreatedDate
     @Column(name = "created_at", nullable = false, updatable = false)
     private LocalDateTime createdAt;
 
-    public Book(String title, String isbn, BookStatus status, Long author, Long category) {
+    public Book(String title, String isbn, BookStatus status, Author author, Category category) {
         this.title = title;
         this.isbn = isbn;
         this.author = author;
