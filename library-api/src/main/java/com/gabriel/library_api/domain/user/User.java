@@ -49,4 +49,10 @@ public class User {
         this.email = email;
         this.status = UserStatus.ACTIVE;
     }
+
+    public void validateCanBorrow(){
+        if(this.status == UserStatus.BLOCKED){
+            throw new IllegalStateException("User is blocked and cannot borrow books.");
+        }
+    }
 }
